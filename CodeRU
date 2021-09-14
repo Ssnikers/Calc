@@ -1,0 +1,35 @@
+from colorama import init
+from colorama import Fore, Back, Style
+
+# use Colorama to make Termcolor work on Windows too
+init()
+
+print( Back.RED )
+what = input( "Что делаем? (+ -): " ) 
+
+print( Back.CYAN )
+
+a = float(input( "Введи первое число: ") )
+
+print( Back.GREEN )
+
+b = float(input( "Введи второе число: ") )
+
+print( Back.YELLOW )
+
+if what == "+":
+    c = a + b
+    print("Результат: " + str(c))
+
+    print( Back.YELLOW )
+
+elif what == "-":
+    c = a - b
+    print("Результат: " + str(c))
+
+    print( Back.BLACK )
+
+else:
+	print("Выбрана неверная операция!")
+
+input()
